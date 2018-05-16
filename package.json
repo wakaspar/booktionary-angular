@@ -1,0 +1,19 @@
+{
+  "name": "booktionary",
+  "version": "1.0.0",
+  "description": "a prototype MEN Stack app, mostly for review, but also so I can keep a reading list",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "express": "^4.16.3",
+    "jquery": "^3.3.1",
+    "mongodb": "^2.2.33",
+    "mongoose": "^5.1.1"
+  }
+}

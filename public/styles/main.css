@@ -1,0 +1,17 @@
+html {
+  padding: 2%;
+}
+h1 {
+  color: red;
+}
+h4, p {
+  padding: 1%;
+}
+
+.viewport {
+  margin: 5%;
+}
+
+.card {
+  background-color: darkgrey;
+}
