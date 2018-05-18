@@ -5,17 +5,6 @@ var app = express();
 // Load up MongoDB noSQL data models
 var db = require('./models');
 
-// var jttw = new db.Book({
-//   title: "Journey To The West",
-//   author: "unknown",
-//   haveRead: "true"
-// });
-
-// jttw.save(function(err, newBook){
-//   if(err){return console.log(err)}
-//   console.log('saved new book: ', newBook)
-// });
-
 // Handles CORS
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");

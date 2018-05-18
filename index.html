@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="ng-booktionary">
   <head>
     <meta charset="utf-8">
     <title>booktionary</title>
@@ -9,14 +9,39 @@
     <link rel="stylesheet" href="/styles/main.css">
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
 
   </head>
   <body>
     <h1>Booktionary!</h1>
+    <hr>
+    <h2>jQuery</h2>
     <div class="viewport">
-      <!-- DATA SHOULD PREPEND HERE -->
+      <!-- jQUERY DATA PREPENDS HERE -->
+    </div>
+    <!-- Angular Viewport -->
+    <div ng-view>
+      <hr>
+      <h2>Angular [server-side]</h2>
+      <div ng-controller="BookController as bookCtrl">
+        <div style="background-color:lightgreen;" ng-repeat="book in bookCtrl.bookList">
+          <h4>{{book.title}}</h5>
+          <p>by {{book.author}}</p>
+          <p>Have Read? {{book.haveRead}}</p>
+        </div>
+      </div>
+      <hr>
+      <h2>Angular [$http]</h2>
+      <div ng-controller="BookAsyncController as bookAsyncCtrl">
+        <div style="background-color:dodgerblue;" ng-repeat="book in bookAsyncCtrl.bookList">
+          <h4>{{book.title}}</h5>
+          <p>by {{book.author}}</p>
+          <p>Have Read? {{book.haveRead}}</p>
+        </div>
+      </div>
+      <hr>
     </div>
   </body>
 </html>

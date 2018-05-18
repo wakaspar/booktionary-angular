@@ -17,6 +17,11 @@ bookList.push({
   author: "Herman Melville",
   haveRead: false,
 });
+bookList.push({
+  title: "AngularJS",
+  author: "Will Kaspar",
+  haveRead: false,
+});
 
 db.Book.remove({}, function(err, books){
   // code in here runs after all classes are removed
